@@ -61,8 +61,7 @@ class MenuView extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5.0),
                   child: Container(
                       height: 40.0,
-                      margin: const EdgeInsets.only(
-                          left: 10, right: 10, top: 10, bottom: 10),
+                      margin: const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10),
                       padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(1.0),
@@ -76,38 +75,36 @@ class MenuView extends StatelessWidget {
                         ],
                       ),
                       alignment: Alignment.centerLeft,
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                // 아이콘
-                                const Icon(
-                                  Icons.people,
-                                  color: Colors.black26,
-                                  size: 20.0,
-                                ),
-                                // 간격
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                // 가운데
-                                Text(
-                                  '홍현기',
-                                  style: const TextStyle(fontSize: 12),
-                                ),
-                              ],
+                      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: <Widget>[
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            // 아이콘
+                            const Icon(
+                              Icons.people,
+                              color: Colors.black26,
+                              size: 20.0,
                             ),
-
-                            // --
+                            // 간격
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            // 가운데
                             Text(
-                              today,
+                              '홍현기',
                               style: const TextStyle(fontSize: 12),
                             ),
+                          ],
+                        ),
 
-                            //
-                          ])),
+                        // --
+                        Text(
+                          today,
+                          style: const TextStyle(fontSize: 12),
+                        ),
+
+                        //
+                      ])),
                 ),
 
                 // 메뉴

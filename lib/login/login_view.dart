@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:load/load.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import './login_controller.dart';
 
@@ -17,7 +16,6 @@ class LoginView extends GetView<LoginController> {
       themeData: LoadingThemeData(
         loadingBackgroundColor: Colors.transparent,
       ),
-      //
 
       child: Scaffold(
         backgroundColor: const Color.fromRGBO(239, 240, 240, 1),
@@ -49,9 +47,8 @@ class LoginView extends GetView<LoginController> {
                     TextLiquidFill(
                       text: '스마틸',
                       waveColor: Colors.black,
-                      boxBackgroundColor:
-                          const Color.fromRGBO(239, 240, 240, 1),
-                      textStyle: GoogleFonts.gugi(
+                      boxBackgroundColor: const Color.fromRGBO(239, 240, 240, 1),
+                      textStyle: TextStyle(
                         fontSize: 75.0,
                         fontWeight: FontWeight.bold,
                       ),
@@ -119,8 +116,7 @@ class LoginView extends GetView<LoginController> {
 
                     // 로그인 버튼
                     ConstrainedBox(
-                      constraints:
-                          BoxConstraints.tightFor(width: context.width),
+                      constraints: BoxConstraints.tightFor(width: context.width),
                       child: ElevatedButton(
                         style: ButtonStyle(
                           shape: MaterialStateProperty.all(
@@ -128,17 +124,12 @@ class LoginView extends GetView<LoginController> {
                               borderRadius: BorderRadius.circular(3),
                             ),
                           ),
-                          backgroundColor: MaterialStateProperty.all(
-                              const Color.fromRGBO(229, 78, 43, 1)),
-                          padding: MaterialStateProperty.all(
-                              const EdgeInsets.all(14)),
+                          backgroundColor: MaterialStateProperty.all(const Color.fromRGBO(229, 78, 43, 1)),
+                          padding: MaterialStateProperty.all(const EdgeInsets.all(14)),
                         ),
                         child: const Text(
                           "로그인",
-                          style: TextStyle(
-                              fontSize: 14,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
+                          style: TextStyle(fontSize: 14, color: Colors.white, fontWeight: FontWeight.bold),
                         ),
                         onPressed: () {
                           showLoadingDialog();

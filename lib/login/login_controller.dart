@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import './login_provider.dart';
-import '../menu/menu_view.dart';
 
-class LoginController extends GetxController {
+class LoginController extends GetxController with StateMixin {
   final GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
-
   late TextEditingController idController, passwordController;
   var id = '';
   var password = '';
@@ -16,11 +14,6 @@ class LoginController extends GetxController {
     super.onInit();
     idController = TextEditingController();
     passwordController = TextEditingController();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
   }
 
   @override
@@ -54,11 +47,17 @@ class LoginController extends GetxController {
     // 데이터 호출
     var loginProvider = LoginProvider();
 
+    var data = loginProvider.checkLogin(id, password);
+
+/*
     loginProvider.checkLogin(id, password).then((result) {
       List<dynamic> data = result.body;
 
       String ckid = data[0]['CK_ID'];
       String ckpass = data[0]['CK_PASS'];
+
+
+
 
       // 로그인 체크
       if (ckid == 'false') {
@@ -71,8 +70,12 @@ class LoginController extends GetxController {
         //print('03_로그인 성공');
 
         // 페이지 이동
-        Get.offAll(() => MenuView());
+        Get.offNamed('Login');
       }
     }, onError: (err) {});
+
+    */
+
+    //Get.offNamed('/menu');
   }
 }
