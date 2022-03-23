@@ -5,8 +5,6 @@ import '../common/widget/side_bar.dart';
 import './sample_controller.dart';
 
 class SampleView extends GetView<SampleController> {
-  SampleView({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,15 +25,10 @@ class SampleView extends GetView<SampleController> {
         body: controller.obx((data) => Center(
               child: Center(
                   child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  //CircleAvatar(
-                  //  radius: 80,
-                  //  backgroundImage: NetworkImage(data['picture']),
-                  //),
-                  Text(data['name']),
-                ],
-              )),
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                    Text(data[0]),
+                  ])),
             )));
   }
 }

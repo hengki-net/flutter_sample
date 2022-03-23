@@ -12,6 +12,9 @@ class StartApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(debugShowCheckedModeBanner: false, initialRoute: '/sample', getPages: Routes.routes);
+    return GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialRoute: '/sample',
+        getPages: Routes.routes);
   }
 }

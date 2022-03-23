@@ -4,7 +4,8 @@ import 'package:get/get.dart';
 
 import 'sample_provider.dart';
 
-class SampleController extends GetxController with StateMixin<dynamic> {
+class SampleController extends GetxController
+    with StateMixin<dynamic> {
   final GlobalKey<FormState> sampleFormKey = GlobalKey<FormState>();
 
   @override

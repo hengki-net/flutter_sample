@@ -11,8 +11,17 @@ import './sample/sample_view.dart';
 
 class Routes {
   static final routes = [
-    GetPage(name: '/login', page: () => LoginView(), binding: LoginBinding()),
-    GetPage(name: '/menu', page: () => MenuView(), binding: MenuBinding()),
-    GetPage(name: '/sample', page: () => SampleView(), binding: SampleBinding()),
+    GetPage(
+        name: '/login',
+        page: () => LoginView(),
+        binding: LoginBinding()),
+    GetPage(
+        name: '/menu',
+        page: () => MenuView(),
+        binding: MenuBinding()),
+    GetPage(
+        name: '/sample',
+        page: () => SampleView(),
+        binding: SampleBinding()),
   ];
 }
